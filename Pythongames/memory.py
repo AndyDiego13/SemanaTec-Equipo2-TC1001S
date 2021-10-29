@@ -12,11 +12,13 @@ Exercises:
 
 from random import *
 from turtle import *
+from typing import Counter
 from freegames import path
+from string import hexdigits, punctuation
 
 car = path('car.gif')
-tiles = list(range(32)) * 2
-state = {'mark': None}
+tiles = list(range(32))*2
+state = {'mark': 0}
 hide = [True] * 64
 
 def square(x, y):
@@ -57,6 +59,7 @@ def draw():
     goto(0, 0)
     shape(car)
     stamp()
+    
 
     for count in range(64):
         if hide[count]:
@@ -65,12 +68,21 @@ def draw():
 
     mark = state['mark']
 
-    if mark is not None and hide[mark]:
-        x, y = xy(mark)
-        up()
-        goto(x + 2, y)
-        color('black')
-        write(tiles[mark], font=('Arial', 30, 'normal'))
+    if mark <9:
+        if mark is not None and hide[mark]:
+            x, y = xy(mark)
+            up()
+            goto(x + 18, y + 5)#numeros sencillos
+            color('black')
+            write(tiles[mark], font=('Arial', 30, 'normal'))
+    else:
+        if mark is not None and hide[mark]:
+            x, y = xy(mark)
+            up()
+            goto(x + 20, y)#numeros dobles
+            color('black')
+            write(tiles[mark], font=('Arial', 30, 'normal'))
+
 
     update()
     ontimer(draw, 100)
@@ -81,5 +93,16 @@ addshape(car)
 hideturtle()
 tracer(False)
 onscreenclick(tap)
+"""
+flip = 0
+
+def count(flip):
+    cardsLeft = 64
+    cardsLeft >0:
+        flip += 1
+        onscreenclick(tap)
+    #print("El juego termino con: ", {flip}, "intentos.")
+"""
+
 draw()
 done()

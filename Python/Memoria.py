@@ -14,7 +14,7 @@ def square(x, y):
     up()
     goto(x, y)
     down()
-    color('black', 'white')
+    color('green', 'blue')
     begin_fill()
     for count in range(4):
         forward(50)
@@ -38,9 +38,9 @@ def tap(x, y):
     mark = state['mark']
     
     if mark is None or mark == spot or tiles[mark] != tiles[spot]:
+        state['mark'] = spot
         if(hide == [False] * 64):
             print("Ganaste, todas las casillas estan volteadas")
-        state['mark'] = spot
 
     else:
         hide[spot] = False

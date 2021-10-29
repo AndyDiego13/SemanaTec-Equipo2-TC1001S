@@ -17,9 +17,9 @@ from freegames import path
 from string import hexdigits, punctuation
 
 car = path('car.gif')
-tiles = list(range(32))*2
+tiles = list(range(16))*2
 state = {'mark': 0}
-hide = [True] * 64
+hide = [True] * 32
 
 def square(x, y):
     "Draw white square with black outline at (x, y)."
@@ -56,18 +56,18 @@ def tap(x, y):
 def draw():
     "Draw image and tiles."
     clear()
-    goto(0, 0)
+    goto(0, -200)
     shape(car)
     stamp()
     
 
-    for count in range(64):
+    for count in range(32):
         if hide[count]:
             x, y = xy(count)
             square(x, y)
 
     mark = state['mark']
-
+    
     if mark <9:
         if mark is not None and hide[mark]:
             x, y = xy(mark)
@@ -82,13 +82,14 @@ def draw():
             goto(x + 20, y)#numeros dobles
             color('black')
             write(tiles[mark], font=('Arial', 30, 'normal'))
+    
 
 
     update()
     ontimer(draw, 100)
 
 shuffle(tiles)
-setup(420, 420, 370, 0)
+setup(430, 420, 370, 0)
 addshape(car)
 hideturtle()
 tracer(False)

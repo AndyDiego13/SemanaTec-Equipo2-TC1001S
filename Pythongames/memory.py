@@ -79,7 +79,7 @@ def draw():
         if mark is not None and hide[mark]:
             x, y = xy(mark)
             up()
-            goto(x + 20, y)#numeros dobles
+            goto(x + 12, y + 11)#numeros dobles
             color('black')
             write(tiles[mark], font=('Arial', 30, 'normal'))
     

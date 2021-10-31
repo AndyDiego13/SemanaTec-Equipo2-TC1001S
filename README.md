@@ -2,12 +2,12 @@
 Repositorio grupal equipo 2 Semana Tec - TC1001S
 
 # Integrantes 
-Andrea Serrano Diego        A01028728
-Kevin López Cano            A01028138
-Iwalani Amador Piaga        A01732251
+- Andrea Serrano Diego        A01028728
+- Kevin López Cano            A01028138
+- Iwalani Amador Piaga        A01732251
 # Juegos seleccionados
-memory
-snake 
+ - memory
+ - snake 
 
 # Cambios realizados en memory
           Andrea Serrano Diego
@@ -32,3 +32,5 @@ snake
     - movimiento en la comida
 
 # Enlace al video que explica las modificaciones
+
+* 

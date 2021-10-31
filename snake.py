@@ -20,10 +20,7 @@ aim = vector(0, -10)
 def change(x, y):
     "Change snake direction."
     aim.x = x
-    aim.y = y
-    "Change the direction of the food"
-    food.x = randrange(-15, 15) * 2
-    food.y = randrange(-15, 15) * 2
+    aim.y = y 
 
 def inside(head):
     "Return True if head inside boundaries."
@@ -57,15 +54,6 @@ def move():
     update()
     ontimer(move, 100)
 
-
-# New color background when starting the game
-wn = turtle.Screen()
-wn.title("Snake")
-colors = ["green", "violet", "blue", "purple", "yellow"]
-i = randint(0,4)
-wn.bgcolor(colors[i])
-wn.setup(width = 600, height = 600)
-wn.tracer(0)
 
 setup(420, 420, 370, 0)
 hideturtle()

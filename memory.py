@@ -14,8 +14,10 @@ from random import *
 from turtle import *
 from freegames import path
 
-car = path('car.gif')
-tiles = list(range(32)) * 2
+car = path('car.gif') 
+#tiles = list(range(32)) * 2  --> change to "Use letters instead of tiles"
+# "tiles" wasn´t renamed to avoid confusion when adding changes 
+tiles = list(string.ascii_lowercase)*2
 state = {'mark': None}
 hide = [True] * 64
 

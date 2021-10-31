@@ -6,7 +6,7 @@ Andrea Serrano Diego        A01028728
 Kevin López Cano            A01028138
 Iwalani Amador Piaga        A01732251
 # Juegos seleccionados
-memory 
+memory
 snake 
 
 # Cambios realizados en memory

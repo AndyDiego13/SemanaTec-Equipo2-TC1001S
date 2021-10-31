@@ -16,9 +16,7 @@ from freegames import path
 import string 
 
 car = path('car.gif') 
-#tiles = list(range(32)) * 2  --> change to "Use letters instead of tiles"
-# "tiles" wasn´t renamed to avoid confusion when adding changes 
-tiles = list(string.ascii_lowercase)*2
+tiles = list(range(32)) * 2 
 state = {'mark': None}
 hide = [True] * 64
 
@@ -53,11 +51,6 @@ def tap(x, y):
         hide[spot] = False
         hide[mark] = False
         state['mark'] = None 
-# notify when a new pair is found 
-    points = 0
-    if mark == None:  
-        newPoints = points + 1  
-        print(" nueva pareja encontrada")
 
 def draw():
     "Draw image and tiles."

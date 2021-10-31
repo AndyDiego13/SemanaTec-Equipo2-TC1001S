@@ -53,6 +53,11 @@ def tap(x, y):
         hide[spot] = False
         hide[mark] = False
         state['mark'] = None 
+# notify when a new pair is found 
+    points = 0
+    if mark == None:  
+        newPoints = points + 1  
+        print(" nueva pareja encontrada")
 
 def draw():
     "Draw image and tiles."

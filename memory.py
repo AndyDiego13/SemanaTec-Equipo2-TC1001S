@@ -13,6 +13,7 @@ Exercises:
 from random import *
 from turtle import *
 from freegames import path
+import string 
 
 car = path('car.gif') 
 #tiles = list(range(32)) * 2  --> change to "Use letters instead of tiles"
@@ -51,7 +52,7 @@ def tap(x, y):
     else:
         hide[spot] = False
         hide[mark] = False
-        state['mark'] = None
+        state['mark'] = None 
 
 def draw():
     "Draw image and tiles."

@@ -10,8 +10,10 @@ Exercises
 """
 
 from turtle import *
-from random import randrange
+from random import randrange, triangular
 from freegames import square, vector
+import turtle
+
 
 food = vector(0, 0)
 snake = [vector(10, 0)]
@@ -51,9 +53,13 @@ def move():
         square(body.x, body.y, 9, 'black')
 
     square(food.x, food.y, 9, 'green')
+    
     update()
-    ontimer(move, -150)
+    ontimer(move, 40)
 
+wn = turtle.Screen()
+wn.title("Snake Game")
+wn.setup(width=600, height=600)
 setup(420, 420, 370, 0)
 hideturtle()
 tracer(False)

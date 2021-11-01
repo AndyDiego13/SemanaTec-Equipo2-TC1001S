@@ -25,8 +25,8 @@ Repositorio grupal equipo 2 Semana Tec - TC1001S
 
 # modificaciones en snake
   • Andrea Serrano
- -
- -
+ - pantalla de juego "snake game" 
+ - aumento en velocidad de snake
 
   • Iwalani Amador
  - cambiar el color de fondo aleatorio

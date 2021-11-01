@@ -14,6 +14,7 @@ from random import randrange, triangular
 from freegames import square, vector
 import turtle
 
+from random import randint 
 
 food = vector(0, 0)
 snake = [vector(10, 0)]
@@ -23,7 +24,11 @@ def change(x, y):
     "Change snake direction."
     aim.x = x
     aim.y = y
-
+    
+    "Change food direction"
+    food.x = randrange(-15, 15) * 5
+    food.y = randrange(-15, 15) * 5
+    
 def inside(head):
     "Return True if head inside boundaries."
     return -200 < head.x < 190 and -200 < head.y < 190
@@ -56,6 +61,18 @@ def move():
     
     update()
     ontimer(move, 40)
+    
+    
+    
+# random background color 
+wn = turtle.Screen()
+wn.title("Snake")
+colors = ["green", "violet", "blue", "purple", "yellow"]
+i = randint(0,4)
+wn.bgcolor(colors[i])
+wn.setup(width = 600, height = 600)
+wn.tracer(0)
+
 
 wn = turtle.Screen()
 wn.title("Snake Game")

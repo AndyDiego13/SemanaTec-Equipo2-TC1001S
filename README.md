@@ -4,6 +4,7 @@ Repositorio grupal equipo 2 Semana Tec - TC1001S
 <<<<<<< HEAD
 Autores: Andrea Serrano Diego   A01028728
          Kevin López Cano       A01028138       
+<<<<<<< HEAD
          Iwalani Amador Piaga        
 =======
 # Integrantes 
@@ -38,3 +39,6 @@ snake
 
 # Enlace al video que explica las modificaciones
 >>>>>>> 82098db5843b916dcc945935ed372b742d01c32e
+=======
+         Iwalani Amador Piaga   A01732251     
+>>>>>>> 35b16a007049b5bbba715e701f13aff1572b44ec

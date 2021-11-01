@@ -3,20 +3,12 @@
 """
 Created on Fri Oct 29 08:25:27 2021
 
-@author: kevinlopez
+@author: KevinLopez/AndreaSerrano/IwalaniAmador
 """
 
-"""Snake, classic arcade game.
+#Snake, classic arcade game.
 
-Exercises
-
-1. How do you make the snake faster or slower?
-2. How can you make the snake go around the edges?
-3. How would you move the food?
-4. Change the snake to respond to mouse clicks.
-
-"""
-
+#Imports
 from random import randrange
 from turtle import *
 from freegames import square, vector
@@ -59,13 +51,13 @@ def move():
     clear()
 
     for body in snake:
-        square(body.x, body.y, 9, 'green')
+        square(body.x, body.y, 9, 'green')#The color of the snake was changed to green
 
-    square(food.x, food.y, 9, 'blue')
+    square(food.x, food.y, 9, 'blue')#The color of the food was changed to blue
     update()
     ontimer(move, 100)
 
-
+#Functions Calls
 setup(420, 420, 370, 0)
 hideturtle()
 tracer(False)

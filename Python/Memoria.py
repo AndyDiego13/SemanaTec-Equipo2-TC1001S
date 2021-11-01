@@ -1,4 +1,12 @@
-"""Memory, puzzle game of number pairs."""
+"""
+Created on Fri Oct 29 08:25:27 2021
+
+@author: KevinLopez/AndreaSerrano/IwalaniAmador
+"""
+
+#Memory, puzzle game of number pairs.
+
+#Imports
 from random import *
 from turtle import *
 
@@ -9,12 +17,13 @@ tiles = list(range(32)) * 2
 state = {'mark': None}
 hide = [True] * 64
 
+
 def square(x, y):
     "Draw white square with black outline at (x, y)."
     up()
     goto(x, y)
     down()
-    color('green', 'blue')
+    color('green', 'blue') #The colors were changed to green for the grill and blue for the background
     begin_fill()
     for count in range(4):
         forward(50)
@@ -39,7 +48,7 @@ def tap(x, y):
     
     if mark is None or mark == spot or tiles[mark] != tiles[spot]:
         state['mark'] = spot
-        if(hide == [False] * 64):
+        if(hide == [False] * 64): #The list "mark" is evaluated to know if all the tiles were unhidden 
             print("Ganaste, todas las casillas estan volteadas")
 
     else:
@@ -72,7 +81,7 @@ def draw():
     update()
     ontimer(draw, 100)
 
-
+#Functions Calls
 shuffle(tiles)
 setup(420, 420, 370, 0)
 addshape(car)

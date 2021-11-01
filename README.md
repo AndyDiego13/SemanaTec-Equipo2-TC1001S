@@ -10,24 +10,24 @@ Repositorio grupal equipo 2 Semana Tec - TC1001S
   • memory 
   • snake
 
-# modificaciones en snake 
+# modificaciones en memory
   • Andrea Serrano
- -
- -
+ - centrado de caracteres 
+ - tamaño del juego
   • Iwalani Amador
- -
- -
+ - avisa cuando se encuentra un nuevo par
+ - cambio de números por letras 
   • Kevin López
- -
- -
+ - identifica cuando todas las casillas están llenas
+ -inversion de colores en fondo y grill 
 
-# modificaciones en snake 
+# modificaciones en snake
   • Andrea Serrano
  -
  -
   • Iwalani Amador
- -
- -
+ - cambiar el color de fondo aleatorio
+ - movimiento en la comida 
   • Kevin López
- -
- -
+ - cambio de color de snake y su comida 
+ - inversión de los controles 

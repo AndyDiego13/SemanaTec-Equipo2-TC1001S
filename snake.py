@@ -13,7 +13,7 @@ from turtle import *
 from random import randrange
 from freegames import square, vector
 
-from random import randint
+from random import randint 
 import turtle
 
 food = vector(0, 0)
@@ -60,6 +60,15 @@ def move():
     square(food.x, food.y, 9, 'green')
     update()
     ontimer(move, 100)
+    
+# random background color 
+wn = turtle.Screen()
+wn.title("Snake")
+colors = ["green", "violet", "blue", "purple", "yellow"]
+i = randint(0,4)
+wn.bgcolor(colors[i])
+wn.setup(width = 600, height = 600)
+wn.tracer(0)
 
 
 setup(420, 420, 370, 0)

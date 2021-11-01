@@ -15,9 +15,11 @@ from turtle import *
 from typing import Counter
 from freegames import path
 from string import hexdigits, punctuation
+import string # Necessary library since the numbers were changed to letters
 
 car = path('car.gif')
-tiles = list(range(16))*2
+#tiles = list(range(32)) * 2  --> change to "Use letters instead of tiles"
+tiles = list(string.ascii_lowercase)*2 #swap tiles by letters
 state = {'mark': 0}
 hide = [True] * 32
 

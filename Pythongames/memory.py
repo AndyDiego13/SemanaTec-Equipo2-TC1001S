@@ -12,14 +12,14 @@ Exercises:
 
 from random import *
 from turtle import *
+from typing import Counter
 from freegames import path
-import string # Necessary library since the numbers were changed to letters
+from string import hexdigits, punctuation
 
-car = path('car.gif')  
-#tiles = list(range(32)) * 2  --> change to "Use letters instead of tiles"
-tiles = list(string.ascii_lowercase)*2 #swap tiles by letters
-state = {'mark': None}
-hide = [True] * 64
+car = path('car.gif')
+tiles = list(range(16))*2
+state = {'mark': 0}
+hide = [True] * 32
 
 def square(x, y):
     "Draw white square with black outline at (x, y)."
@@ -51,42 +51,59 @@ def tap(x, y):
     else:
         hide[spot] = False
         hide[mark] = False
-        state['mark'] = None 
-    # notify when a new pair is found 
-    points = 0
-    if mark == None:  
-        newPoints = points + 1  
-        print(newPoints, " nueva pareja encontrada")
+        state['mark'] = None
 
 def draw():
     "Draw image and tiles."
     clear()
-    goto(0, 0)
+    goto(0, -200)
     shape(car)
     stamp()
+    
 
-    for count in range(64):
+    for count in range(32):
         if hide[count]:
             x, y = xy(count)
             square(x, y)
 
     mark = state['mark']
+    
+    if mark <9:
+        if mark is not None and hide[mark]:
+            x, y = xy(mark)
+            up()
+            goto(x + 18, y + 5)#numeros sencillos
+            color('black')
+            write(tiles[mark], font=('Arial', 30, 'normal'))
+    else:
+        if mark is not None and hide[mark]:
+            x, y = xy(mark)
+            up()
+            goto(x + 12, y + 11)#numeros dobles
+            color('black')
+            write(tiles[mark], font=('Arial', 30, 'normal'))
+    
 
-    if mark is not None and hide[mark]:
-        x, y = xy(mark)
-        up()
-        goto(x + 2, y)
-        color('black')
-        write(tiles[mark], font=('Arial', 30, 'normal'))
 
     update()
     ontimer(draw, 100)
 
 shuffle(tiles)
-setup(420, 420, 370, 0)
+setup(430, 420, 370, 0)
 addshape(car)
 hideturtle()
 tracer(False)
 onscreenclick(tap)
+"""
+flip = 0
+
+def count(flip):
+    cardsLeft = 64
+    cardsLeft >0:
+        flip += 1
+        onscreenclick(tap)
+    #print("El juego termino con: ", {flip}, "intentos.")
+"""
+
 draw()
 done()

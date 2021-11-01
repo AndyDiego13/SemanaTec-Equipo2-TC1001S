@@ -1,6 +1,6 @@
 # SemanaTec-Equipo2-TC1001S
 Repositorio grupal equipo 2 Semana Tec - TC1001S
-
+      
 # Integrantes 
 - Andrea Serrano Diego        A01028728
 - Kevin López Cano            A01028138
@@ -32,5 +32,4 @@ Repositorio grupal equipo 2 Semana Tec - TC1001S
     - movimiento en la comida
 
 # Enlace al video que explica las modificaciones
-
-* 
+- 

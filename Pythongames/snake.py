@@ -10,11 +10,10 @@ Exercises
 """
 
 from turtle import *
-from random import randrange
+from random import randrange, triangular
 from freegames import square, vector
-
-from random import randint 
 import turtle
+
 
 food = vector(0, 0)
 snake = [vector(10, 0)]
@@ -23,11 +22,7 @@ aim = vector(0, -10)
 def change(x, y):
     "Change snake direction."
     aim.x = x
-    aim.y = y 
-    
-    "Change food direction"
-    food.x = randrange(-15, 15) * 5
-    food.y = randrange(-15, 15) * 5
+    aim.y = y
 
 def inside(head):
     "Return True if head inside boundaries."
@@ -58,19 +53,13 @@ def move():
         square(body.x, body.y, 9, 'black')
 
     square(food.x, food.y, 9, 'green')
-    update()
-    ontimer(move, 100)
     
-# random background color 
+    update()
+    ontimer(move, 40)
+
 wn = turtle.Screen()
-wn.title("Snake")
-colors = ["green", "violet", "blue", "purple", "yellow"]
-i = randint(0,4)
-wn.bgcolor(colors[i])
-wn.setup(width = 600, height = 600)
-wn.tracer(0)
-
-
+wn.title("Snake Game")
+wn.setup(width=600, height=600)
 setup(420, 420, 370, 0)
 hideturtle()
 tracer(False)

@@ -14,9 +14,11 @@ Repositorio grupal equipo 2 Semana Tec - TC1001S
   • Andrea Serrano
  - centrado de caracteres 
  - tamaño del juego
+
   • Iwalani Amador
  - avisa cuando se encuentra un nuevo par
  - cambio de números por letras 
+
   • Kevin López
  - identifica cuando todas las casillas están llenas
  -inversion de colores en fondo y grill 
@@ -25,9 +27,11 @@ Repositorio grupal equipo 2 Semana Tec - TC1001S
   • Andrea Serrano
  -
  -
+
   • Iwalani Amador
  - cambiar el color de fondo aleatorio
  - movimiento en la comida 
+
   • Kevin López
  - cambio de color de snake y su comida 
  - inversión de los controles 

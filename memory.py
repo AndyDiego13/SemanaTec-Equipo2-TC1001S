@@ -13,10 +13,11 @@ Exercises:
 from random import *
 from turtle import *
 from freegames import path
-import string 
+import string # Necessary library since the numbers were changed to letters
 
-car = path('car.gif') 
-tiles = list(range(32)) * 2 
+car = path('car.gif')  
+#tiles = list(range(32)) * 2  --> change to "Use letters instead of tiles"
+tiles = list(string.ascii_lowercase)*2 #swap tiles by letters
 state = {'mark': None}
 hide = [True] * 64
 
@@ -51,6 +52,11 @@ def tap(x, y):
         hide[spot] = False
         hide[mark] = False
         state['mark'] = None 
+    # notify when a new pair is found 
+    points = 0
+    if mark == None:  
+        newPoints = points + 1  
+        print(newPoints, " nueva pareja encontrada")
 
 def draw():
     "Draw image and tiles."

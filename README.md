@@ -21,7 +21,7 @@ Repositorio grupal equipo 2 Semana Tec - TC1001S
 
   • Kevin López
  - identifica cuando todas las casillas están llenas
- -inversion de colores en fondo y grill 
+ - inversion de colores en fondo y grill 
 
 # modificaciones en snake
   • Andrea Serrano
